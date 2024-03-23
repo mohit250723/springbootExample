@@ -1,4 +1,5 @@
+#Defining base docker image
 FROM openjdk:11
-EXPOSE 9091
-ADD target/spring-boot-docker.jar spring-boot-docker.jar
-ENTRYPOINT ["java","-jar","/spring-boot-docker.jar"]
+LABEL maintainer="javawithdockerbymohit.net"
+ADD target/springbootExample-0.0.1-SNAPSHOT.jar springbootcrud-docker.jar
+ENTRYPOINT ["java","-jar","springbootcrud-docker.jar"]
